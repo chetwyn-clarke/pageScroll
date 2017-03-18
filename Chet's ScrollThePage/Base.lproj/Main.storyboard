@@ -56,6 +56,9 @@
                             <constraint firstAttribute="trailing" secondItem="ea4-bJ-hY5" secondAttribute="trailing" id="p7p-BA-1cf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="a1o-10-a6s" id="0UQ-ox-cqD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
