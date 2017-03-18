@@ -13,11 +13,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     
     var images = [UIImageView]()
-    var newX: CGFloat = 0.0
-    var contentWidth: CGFloat = 0.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        var contentWidth: CGFloat = 0.0
+        
+        //We can set the scroll view width using the constraints.  If we make it smaller than the fullscreen width, we can ensure that the next images bleed into the mainView.
+        
+        print("Scrollview Width: \(scrollView.frame.size.width)")
+        
+        let scrollViewWidth = scrollView.frame.size.width
         
         for x in 0...2 {
             
@@ -27,8 +37,8 @@ class ViewController: UIViewController {
             images.append(imageView)
             
             // Determine where the image will be located.
-            //var newX: CGFloat = 0.0
-            newX = view.frame.midX + (view.frame.size.width * CGFloat(x))
+            var newX: CGFloat = 0.0
+            newX = scrollViewWidth / 2 + (scrollViewWidth * CGFloat(x))
             
             contentWidth += newX
             
@@ -39,9 +49,12 @@ class ViewController: UIViewController {
             imageView.frame = CGRect(x: newX - 75, y: (view.frame.size.height / 2) - 75, width: 150, height: 150)
         }
         
-        scrollView.backgroundColor = UIColor.purple
-        scrollView.contentSize = CGSize(width: contentWidth, height: view.frame.size.height)
+        //scrollView.backgroundColor = UIColor.purple
         
+        //scrollView.contentSize = CGSize(width: contentWidth, height: view.frame.size.height)
+        
+        //Note, the above code is what is in the book, but this adds extra space after the last image.  My code below stops it from scrolling past the last image.
+        scrollView.contentSize = CGSize(width: scrollViewWidth + (scrollViewWidth * CGFloat(images.count - 1)), height: view.frame.size.height)
     }
 
 

@@ -38,9 +38,8 @@
                                     <constraint firstAttribute="height" constant="190" id="xsb-VM-GJE"/>
                                 </constraints>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1o-10-a6s">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1o-10-a6s">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -51,6 +50,10 @@
                             <constraint firstAttribute="trailing" secondItem="WaX-z8-nUD" secondAttribute="trailing" id="99A-eI-hNA"/>
                             <constraint firstItem="Ikz-GL-j4k" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="9o0-qT-VAP"/>
                             <constraint firstItem="ea4-bJ-hY5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AF7-dA-1sq"/>
+                            <constraint firstItem="a1o-10-a6s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CJY-GY-Peb"/>
+                            <constraint firstItem="a1o-10-a6s" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NmR-Uv-LkX"/>
+                            <constraint firstAttribute="trailing" secondItem="a1o-10-a6s" secondAttribute="trailing" id="UPZ-Mb-sAg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="a1o-10-a6s" secondAttribute="bottom" id="VZ9-bX-r9l"/>
                             <constraint firstItem="ea4-bJ-hY5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aRw-W4-Da6"/>
                             <constraint firstItem="Ikz-GL-j4k" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="acd-5U-PTo"/>
                             <constraint firstAttribute="trailing" secondItem="ea4-bJ-hY5" secondAttribute="trailing" id="p7p-BA-1cf"/>
